@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.hassanusman.permissions.sample"
+        minSdkVersion 9
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile project(':permissions')
+    compile 'com.hassanusman.android:permissions:3.5'
+    compile project(path: ':permissions')
+}
